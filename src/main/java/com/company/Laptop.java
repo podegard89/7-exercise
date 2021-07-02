@@ -1,8 +1,29 @@
 package com.company;
 
-public class Laptop {
-    // what are attributes of a laptop, that distinguish it from a Computer and Phone
-    // keyboard, trackpad, monitor
-    // what actions does the computer have?
-    // createDocument(), sendEmail(), writeCode()
+public class Laptop extends Computer {
+    private final String manufacturer;
+    private final double monitorSizeInches;
+    private boolean isOpen = false;
+
+    public Laptop(String OS, int storage, int memory, String manufacturer, double monitorSizeInches) {
+        super(OS, storage, memory);
+        this.manufacturer = manufacturer;
+        this.monitorSizeInches = monitorSizeInches;
+    }
+
+    public void openLaptop() {
+        isOpen = !isOpen;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public double getMonitorSizeInches() {
+        return monitorSizeInches;
+    }
+
+    public boolean isOpen() {
+        return isOpen;
+    }
 }

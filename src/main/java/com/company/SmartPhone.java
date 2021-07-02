@@ -1,8 +1,21 @@
 package com.company;
 
-public class SmartPhone {
-    // what attributes does a SmartPhone have?
-    // cellular device (5ghz), touchscreen, voicemail
-    // what actions does a SmartPhone have?
-    // makeCall(), checkVoiceMail(), ring()
+public class SmartPhone extends Computer {
+    private boolean isCalling = false;
+
+    public SmartPhone(String OS, int storage, int memory) {
+        super(OS, storage, memory);
+    }
+
+    public void makeCall() {
+        isCalling = !isCalling;
+    }
+
+    public void takePhoto(String asciiArt) {
+        System.out.println(asciiArt);
+    }
+
+    public boolean isCalling() {
+        return isCalling;
+    }
 }
